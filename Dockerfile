@@ -10,8 +10,10 @@ RUN apt-get -qq update \
     tesseract-ocr
 
 # Load languages
-RUN apt-get install -y \
-  tesseract-ocr-jpn
+RUN apt-get install -y -qq \
+  tesseract-ocr-jpn    \
+  tesseract-ocr-eng    \
+  tesseract-ocr-chi-sim
 
 ADD . $GOPATH/src/github.com/otiai10/ocrserver
 WORKDIR $GOPATH/src/github.com/otiai10/ocrserver
