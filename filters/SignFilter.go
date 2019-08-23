@@ -2,15 +2,13 @@ package filters
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 	"strconv"
 	"strings"
 )
 
 type SignFilter struct {
-	Logger *log.Logger
-	Next   http.Handler
+	Next http.Handler
 }
 
 // ServeHTTP ...

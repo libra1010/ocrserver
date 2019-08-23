@@ -1,50 +1,10 @@
 # bou.ke/monkey v1.0.1
 bou.ke/monkey
-# git.sinostage.net/micro.service.go/core v0.0.0-20190820025208-00b8e40c764e
-git.sinostage.net/micro.service.go/core/logger
-git.sinostage.net/micro.service.go/core/util
-git.sinostage.net/micro.service.go/core/security
-# github.com/DataDog/zstd v1.3.6-0.20190409195224-796139022798
-github.com/DataDog/zstd
-# github.com/Shopify/sarama v1.22.1
-github.com/Shopify/sarama
-# github.com/davecgh/go-spew v1.1.1
-github.com/davecgh/go-spew/spew
-# github.com/eapache/go-resiliency v1.1.0
-github.com/eapache/go-resiliency/breaker
-# github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21
-github.com/eapache/go-xerial-snappy
-# github.com/eapache/queue v1.1.0
-github.com/eapache/queue
-# github.com/goinggo/mapstructure v0.0.0-20140717182941-194205d9b4a9
-github.com/goinggo/mapstructure
-# github.com/golang/snappy v0.0.1
-github.com/golang/snappy
 # github.com/otiai10/gosseract v2.2.1+incompatible
 github.com/otiai10/gosseract
 # github.com/otiai10/marmoset v0.4.0
 github.com/otiai10/marmoset
 # github.com/otiai10/mint v1.2.1
 github.com/otiai10/mint
-# github.com/pierrec/lz4 v0.0.0-20190327172049-315a67e90e41
-github.com/pierrec/lz4
-github.com/pierrec/lz4/internal/xxh32
-# github.com/rcrowley/go-metrics v0.0.0-20181016184325-3113b8401b8a
-github.com/rcrowley/go-metrics
-# go.uber.org/atomic v1.4.0
-go.uber.org/atomic
-# go.uber.org/multierr v1.1.0
-go.uber.org/multierr
-# go.uber.org/zap v1.10.0
-go.uber.org/zap
-go.uber.org/zap/zapcore
-go.uber.org/zap/internal/bufferpool
-go.uber.org/zap/buffer
-go.uber.org/zap/internal/color
-go.uber.org/zap/internal/exit
-# golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3
+# golang.org/x/net v0.0.0-20190125091013-d26f9f9a57f3
 golang.org/x/net/context
-golang.org/x/net/proxy
-golang.org/x/net/internal/socks
-# gopkg.in/natefinch/lumberjack.v2 v2.0.0
-gopkg.in/natefinch/lumberjack.v2

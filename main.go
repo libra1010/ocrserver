@@ -19,7 +19,7 @@ func main() {
 	marmoset.LoadViews("./app/views")
 
 	r := marmoset.NewRouter()
-	r.Apply(&filters.SignFilter{})
+
 	// API
 	r.GET("/status", controllers.Status)
 	r.POST("/base64", controllers.Base64)
@@ -30,8 +30,9 @@ func main() {
 
 	logger = log.New(os.Stdout, fmt.Sprintf("[%s] ", "ocrserver"), 0)
 	r.Apply(&filters.LogFilter{Logger: logger})
+	r.Apply(&filters.SignFilter{})
 
-	port := os.Getenv("PORT")
+	port := "8080"
 	if port == "" {
 		logger.Fatalln("Required env `PORT` is not specified.")
 	}
