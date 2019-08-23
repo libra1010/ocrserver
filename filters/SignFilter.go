@@ -2,8 +2,6 @@ package filters
 
 import (
 	"fmt"
-	"git.sinostage.net/micro.service.go/core/logger"
-	"git.sinostage.net/micro.service.go/core/util"
 	"log"
 	"net/http"
 	"strconv"
@@ -50,7 +48,7 @@ func (f *SignFilter) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	identity := SignIdentity{TS: ts, Url: r.URL}
 
-	if !koloCore.SignUtil.ValidateSign(identity, "ocr.signkey", clientSign) {
+	if !SignUtil.ValidateSign(identity, "ocr.signkey", clientSign) {
 		fmt.Println("签名错误 404")
 		w.WriteHeader(http.StatusBadRequest)
 		return
