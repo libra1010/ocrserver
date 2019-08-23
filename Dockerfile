@@ -15,8 +15,7 @@ RUN apt-get install -y -qq \
   tesseract-ocr-eng    \
   tesseract-ocr-chi-sim
 
-ADD . $GOPATH/src/github.com/otiai10/ocrserver
-WORKDIR $GOPATH/src/github.com/otiai10/ocrserver
+
 RUN go build
 
 ENV PORT=8080
