@@ -14,6 +14,18 @@ import (
 	"github.com/otiai10/marmoset"
 )
 
+type Base64Controller struct {
+}
+
+func (this *Base64Controller) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	met := strings.ToUpper(r.Method)
+	if met != "POST" && met != "OPTIONS" {
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+	Base64(w, r)
+}
+
 // Base64 ...
 func Base64(w http.ResponseWriter, r *http.Request) {
 

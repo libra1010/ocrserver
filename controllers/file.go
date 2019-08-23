@@ -16,6 +16,18 @@ var (
 	imgexp = regexp.MustCompile("^image")
 )
 
+type FileController struct {
+}
+
+func (this *FileController) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	met := strings.ToUpper(r.Method)
+	if met != "POST" && met != "OPTIONS" {
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+	FileUpload(w, r)
+}
+
 // FileUpload ...
 func FileUpload(w http.ResponseWriter, r *http.Request) {
 

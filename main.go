@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
+	"github.com/otiai10/marmoset"
+	"github.com/otiai10/ocrserver/filters"
 	"log"
 	"net/http"
 	"os"
 
-	"github.com/otiai10/marmoset"
-
 	"github.com/otiai10/ocrserver/controllers"
-	"github.com/otiai10/ocrserver/filters"
 )
 
 var logger *log.Logger
@@ -20,10 +19,13 @@ func main() {
 
 	r := marmoset.NewRouter()
 
+	//设置访问的路由
 	// API
 	r.GET("/status", controllers.Status)
-	r.POST("/base64", controllers.Base64)
-	r.POST("/file", controllers.FileUpload)
+	r.Handle("/base64", &controllers.Base64Controller{})
+	r.Handle("/file", &controllers.FileController{})
+
+	//r.POST("/file", controllers.FileUpload)
 	// Sample Page
 	r.GET("/", controllers.Index)
 	r.Static("/assets", "./app/assets")
