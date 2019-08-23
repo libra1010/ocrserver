@@ -19,6 +19,7 @@ func main() {
 	marmoset.LoadViews("./app/views")
 
 	r := marmoset.NewRouter()
+	r.Apply(&filters.)
 	// API
 	r.GET("/status", controllers.Status)
 	r.POST("/base64", controllers.Base64)
@@ -26,6 +27,7 @@ func main() {
 	// Sample Page
 	r.GET("/", controllers.Index)
 	r.Static("/assets", "./app/assets")
+
 
 	logger = log.New(os.Stdout, fmt.Sprintf("[%s] ", "ocrserver"), 0)
 	r.Apply(&filters.LogFilter{Logger: logger})
