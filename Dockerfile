@@ -17,8 +17,7 @@ RUN apt-get install -y -qq \
 
 ADD . $GOPATH/src/github.com/otiai10/ocrserver
 WORKDIR $GOPATH/src/github.com/otiai10/ocrserver
-RUN go get ./...
-RUN go test -v github.com/otiai10/gosseract
+RUN go build
 
 ENV PORT=8080
 CMD $GOPATH/bin/ocrserver
